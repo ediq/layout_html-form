@@ -1,4 +1,14 @@
 .form-field {
 	display: block;
-	margin: 10px 0;
+	margin: 6px 0 10px;
+}
+
+.fieldset {
+	padding: 0px 12px 0;
+	margin-bottom: 20px;
+}
+
+.fieldset_2 .form-field {
+	display: block;
+	margin: 5px 0 10px;
 }

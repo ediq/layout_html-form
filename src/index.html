@@ -11,141 +11,174 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h1>HTML Form 2</h1>
-    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="POST" novalidate>
+    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="POST">
 
-      <label class="form-field">
-        Surame:
-        <input 
-          type="text" 
-          name="surname"
-          class="field" 
-        >
-      </label>
-  
-      <label class="form-field">
-        Name:
-        <input 
-          type="text" 
-          name="name"
-          class="field" 
-        >
-      </label>
+      <fieldset class="fieldset">
+        <legend>Personal information</legend>
 
-      <label class="form-field">
-        Surname:
-        <input 
-          type="email" 
-          name="email" 
-          class="field"
-          placeholder="email" 
-          required
-        >
-      </label>
-
-      <label class="form-field">
-        How old are You?
-        <input 
-          type="number" 
-          name="years" 
-          class="field"
-          value="12"
-          min="10"
-          max="100"
-          required
-        >
-      </label>
-
-      <label class="form-field">
-        How old are You?
-        <input 
-          type="number" 
-          name="years" 
-          class="field"
-          value="12"
-          min="10"
-          max="100"
-          required
-        >
-      </label>
-  
-      <label class="form-field">
-        Password: 
-        <input 
-          type="password" 
-          name="form" 
-          class="field"
-          placeholder="pass" 
-          minlength="5" 
-          maxlength="32"
-          pattern="\d+"
-          required
-          tabindex="2"
-        >
-      </label>
-  
-      <div class="form-field">
-        <input 
-          type="checkbox" 
-          name="terms" 
-          class="field"
-          id="terms"
-          tabindex="-1"
-          required
-          checked
-        >
-        <label class="form-label" for="terms">i agry termsa</label>
-      </div>
-  
-      <div class="form-field">
-        Choose your sex:
-  
-        <label>
-          <input type="radio" name="sex" value="m" checked>
-          - man
-        </label>
-  
-        <label>
-          <input type="radio" name="sex" value="w">
-          - woman
-        </label>
-      </div>
-  
-      <label class="form-field">
-        Add your feedback:
-        <textarea 
-          name="feedback"
-          cols="15" 
-          rows="3" 
-          placeholder="Your feedback"
-          ></textarea>
-      </label>
-  
-      <input type="hidden" name="role" value="admin">
-  
-      <div contenteditable="">Введите свой текст</div>
-  
-      <div>
         <label class="form-field">
-          Choose favorite meme!
-          <select name="coloe" required>
-            <option value="" disabled selected>choose meme</option>
-            <option value="meme1">pocker face</option>
-            <option value="meme2">me Gusta</option>
-            <option value="meme3">not bad</option>
-            <option value="meme4">LOL</option>
+          Surname:
+          <input
+            type="text"
+            name="surname"
+            class="field"
+          >
+        </label>
+
+        <label class="form-field">
+          Name:
+          <input
+            type="text"
+            name="name"
+            class="field"
+          >
+        </label>
+
+        <label class="form-field">
+          How old are You?
+          <input
+            type="number"
+            name="years"
+            class="field"
+            value="12"
+            min="10"
+            max="100"
+            required
+          >
+        </label>
+
+        <label class="form-field">
+          Full date of birth:
+          <input
+            type="date"
+            name="old"
+            class="field"
+            value="12"
+            required
+          >
+        </label>
+
+        <label class="form-field">
+          I accept the term of the agreement
+          <input
+            type="checkbox"
+            name="terms"
+            class="field"
+            id="terms"
+            required
+          >
+        </label>
+      </fieldset>
+
+      <fieldset class="fieldset fieldset_2">
+        <legend>Registration</legend>
+
+        <label class="form-field">
+          E-mail:
+          <input
+            type="email"
+            name="email"
+            class="field"
+            placeholder="email@example.com"
+            required
+          >
+        </label>
+
+        <label class="form-field">
+          Password:
+          <input
+            type="password"
+            name="pass"
+            class="field"
+            required
+          >
+        </label>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend>An interesting fact about you!</legend>
+
+        <div class="form-field">
+          Do you love cats?
+
+          <label>
+            <input
+              type="radio"
+              name="cats"
+              value="y"
+              checked>
+            Yes
+          </label>
+
+          <label>
+            <input
+              type="radio"
+              name="cats"
+              value="n">
+            No
+          </label>
+        </div>
+
+        <label class="form-field">
+          What is your favorite color?
+          <input
+            type="color"
+            name="form"
+            class="field"
+          >
+        </label>
+
+        <label class="form-field">
+          What time do you go to bed?
+          <input
+            type="time"
+            name="time"
+            class="field"
+          >
+        </label>
+
+        <label class="form-field">
+          What are your favorite brand of cars?
+          <select
+            name="coloe"
+            required
+            multiple>
+            <option value="car1">BMW</option>
+            <option value="car2">Audi</option>
+            <option value="car3">Lada</option>
           </select>
         </label>
-      </div>
-  
-  
-  
-  
-      
-      <button class="form-button" type="reset">Reset</button>
-      <button class="form-button" type="submit">Sign in</button>
-      <button class="form-button" type="button" disabled>Button</button>
-  
+
+        <label class="form-field">
+          How do you rate out work?
+          <input
+            type="range"
+            name="work"
+            class="field"
+            min="0"
+            max="10"
+          >
+        </label>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend>Additional info:</legend>
+
+        <label class="form-field">
+          Comments:
+          <textarea name="feedback"></textarea>
+        </label>
+
+        <label class="form-field">
+         Would you recommend us?
+          <select name="coloe" required>
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <button class="form-button" type="submit">Submit</button>
     </form>
 
 
