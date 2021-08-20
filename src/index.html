@@ -11,7 +11,144 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h1>HTML Form</h1>
+    <h1>HTML Form 2</h1>
+    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="POST" novalidate>
+
+      <label class="form-field">
+        Surame:
+        <input 
+          type="text" 
+          name="surname"
+          class="field" 
+        >
+      </label>
+  
+      <label class="form-field">
+        Name:
+        <input 
+          type="text" 
+          name="name"
+          class="field" 
+        >
+      </label>
+
+      <label class="form-field">
+        Surname:
+        <input 
+          type="email" 
+          name="email" 
+          class="field"
+          placeholder="email" 
+          required
+        >
+      </label>
+
+      <label class="form-field">
+        How old are You?
+        <input 
+          type="number" 
+          name="years" 
+          class="field"
+          value="12"
+          min="10"
+          max="100"
+          required
+        >
+      </label>
+
+      <label class="form-field">
+        How old are You?
+        <input 
+          type="number" 
+          name="years" 
+          class="field"
+          value="12"
+          min="10"
+          max="100"
+          required
+        >
+      </label>
+  
+      <label class="form-field">
+        Password: 
+        <input 
+          type="password" 
+          name="form" 
+          class="field"
+          placeholder="pass" 
+          minlength="5" 
+          maxlength="32"
+          pattern="\d+"
+          required
+          tabindex="2"
+        >
+      </label>
+  
+      <div class="form-field">
+        <input 
+          type="checkbox" 
+          name="terms" 
+          class="field"
+          id="terms"
+          tabindex="-1"
+          required
+          checked
+        >
+        <label class="form-label" for="terms">i agry termsa</label>
+      </div>
+  
+      <div class="form-field">
+        Choose your sex:
+  
+        <label>
+          <input type="radio" name="sex" value="m" checked>
+          - man
+        </label>
+  
+        <label>
+          <input type="radio" name="sex" value="w">
+          - woman
+        </label>
+      </div>
+  
+      <label class="form-field">
+        Add your feedback:
+        <textarea 
+          name="feedback"
+          cols="15" 
+          rows="3" 
+          placeholder="Your feedback"
+          ></textarea>
+      </label>
+  
+      <input type="hidden" name="role" value="admin">
+  
+      <div contenteditable="">Введите свой текст</div>
+  
+      <div>
+        <label class="form-field">
+          Choose favorite meme!
+          <select name="coloe" required>
+            <option value="" disabled selected>choose meme</option>
+            <option value="meme1">pocker face</option>
+            <option value="meme2">me Gusta</option>
+            <option value="meme3">not bad</option>
+            <option value="meme4">LOL</option>
+          </select>
+        </label>
+      </div>
+  
+  
+  
+  
+      
+      <button class="form-button" type="reset">Reset</button>
+      <button class="form-button" type="submit">Sign in</button>
+      <button class="form-button" type="button" disabled>Button</button>
+  
+    </form>
+
+
     <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
